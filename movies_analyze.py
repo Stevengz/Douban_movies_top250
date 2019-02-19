@@ -3,10 +3,9 @@ import matplotlib.pyplot as plt
 import matplotlib
 
 
+df = pd.read_csv('movies.csv', encoding='utf-8')
 matplotlib.rcParams['font.family'] = 'SimHei'   #配置中文字体
 matplotlib.rcParams['font.size'] = 15   # 更改默认字体大小
-df = pd.read_csv('movies.csv', encoding='utf-8')
-
 
 # 数据分析
 ##########
