@@ -26,7 +26,7 @@ def movies_spider():
         for li in soup.select('ol li'):
             movie_num = li.select('em')[0].string
             movie_name = li.select('.title')[0].string
-            movie_info = li.select('.bd .')[0].get_text().lstrip().rstrip().split('\xa0/\xa0')
+            movie_info = li.select('.bd .')[0].get_text().strip().split('\xa0/\xa0')    # 电影信息
             movie_year = movie_info[0].split()[-1]
             movie_country = movie_info[1]
             movie_type = movie_info[2]
